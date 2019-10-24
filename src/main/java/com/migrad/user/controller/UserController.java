@@ -24,8 +24,8 @@ public class UserController {
         return userService.getAllUsers();
     }
 
-    @GetMapping("/users")
-    public User getUserByUsername(@RequestParam String username) {
+    @GetMapping("/users/{username}")
+    public User getUserByUsername(@PathVariable String username) {
         return userService.getUserByUsername(username);
     }
 
@@ -39,8 +39,8 @@ public class UserController {
         userService.updateUser(user);
     }
 
-    @DeleteMapping("/users")
-    public void deleteUser(@RequestParam String username){
+    @DeleteMapping("/users/{username}")
+    public void deleteUser(@PathVariable String username){
         userService.deleteUser(username);
     }
 }

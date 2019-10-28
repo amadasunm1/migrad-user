@@ -8,16 +8,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/migrad-user-api")
+@RequestMapping("/migrad-community-api")
 public class UserController {
 
     @Autowired
     private UserService userService;
-
-    @GetMapping("/hello-world")
-    public String hello(){
-        return "Hello World!";
-    }
 
     @GetMapping("/users")
     public List<User> getAllUsers() {

@@ -1,6 +1,7 @@
 package com.migrad.user.controller;
 
 import com.migrad.user.model.User;
+import com.migrad.user.model.UserRequest;
 import com.migrad.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -8,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/migrad-community-api")
+@RequestMapping("/user-api")
 public class UserController {
 
     @Autowired
@@ -25,13 +26,13 @@ public class UserController {
     }
 
     @PostMapping("/users")
-    public void createUser(@RequestBody User user) {
-        userService.createUser(user);
+    public void createUser(@RequestBody UserRequest userRequest) {
+        userService.createUser(userRequest);
     }
 
     @PutMapping("/users")
-    public void updateUser(@RequestBody User user) {
-        userService.updateUser(user);
+    public void updateUser(@RequestBody UserRequest userRequest) {
+        userService.updateUser(userRequest);
     }
 
     @DeleteMapping("/users/{username}")

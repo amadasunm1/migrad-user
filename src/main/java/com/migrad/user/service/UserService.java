@@ -1,6 +1,7 @@
 package com.migrad.user.service;
 
 import com.migrad.user.model.User;
+import com.migrad.user.model.UserRequest;
 
 import java.util.List;
 
@@ -9,9 +10,9 @@ public interface UserService {
 
     User getUserByUsername(String username);
 
-    User createUser(User user);
+    User createUser(UserRequest userRequest);
 
-    void updateUser(User user);
+    void updateUser(UserRequest userRequest);
 
     void deleteUser(String username);
 }

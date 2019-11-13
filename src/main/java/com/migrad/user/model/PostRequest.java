@@ -1,21 +1,15 @@
 package com.migrad.user.model;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
 @Data
-@Entity
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
-    @Id
+public class PostRequest {
+    private String subject;
+    private String content;
     private String userName;
-    private String firstName;
-    private String lastName;
+    private Long parentPostId;
 }

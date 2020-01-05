@@ -14,7 +14,7 @@ import java.util.List;
 @ToString(exclude = {"replies"})
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode(callSuper=false)
+@EqualsAndHashCode(callSuper = false)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Post extends BaseEntity{
     @Id
